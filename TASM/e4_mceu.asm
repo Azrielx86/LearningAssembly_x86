@@ -6,7 +6,6 @@ title "Ejercicio 4 - Moreno Chalico Edgar Ulises"
 x         dw    ?
 y         dw    ?
 z         dw    ?
-result    dw    ?
   .code
 inicio:
   mov    ax,@data
@@ -57,7 +56,7 @@ inicio:
   add     ax,bx        ; Se suma ax - bx
   sub     ax,3000d     ; Se resta ax - 3000
 
-  mov     [result],ax  ; Se guarda el resultado calculado en ax en la variable result
+  mov     [z],ax  ; Se guarda el resultado calculado en ax en la variable z
 
   ; Resultado obtenido: 24B0h -> 9392
 
