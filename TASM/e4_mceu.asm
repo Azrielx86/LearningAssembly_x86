@@ -59,6 +59,8 @@ inicio:
 
   mov     [result],ax  ; Se guarda el resultado calculado en ax en la variable result
 
+  ; Resultado obtenido: 24B0h -> 9392
+
 salida:                ; Salida del programa
   mov    ax,4C00h
   int 21h
