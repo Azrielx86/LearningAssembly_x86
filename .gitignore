@@ -4,3 +4,7 @@
 !makefile
 *.o
 *.txt
+*.exe
+*.EXE
+*.OBJ
+*.MAP
