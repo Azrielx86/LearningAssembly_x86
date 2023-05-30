@@ -8,6 +8,7 @@ prompt1        db     "Escribe el primer número: "
 prompt1_len    equ    $ - prompt1
 prompt2        db     "Escribe el segundo número: "
 prompt2_len    equ    $ - prompt2
+nwl            equ    '\n'
 
 section .text
 
@@ -31,19 +32,19 @@ read:
   pop    rsi
   syscall
 
+  cmp    rax,[nwl]
+  jne read
+  ret
+
 _start:
   mov    rax,prompt1
   mov    rdi,prompt1_len
   call print
 
-  mov    rax,num1str
-  mov    rdi,8
-  call print
-
-  mov    rax,prompt2
-  mov    rdi,prompt2_len
-  call print
+  ; mov    rax,num1str
+  ; mov    rdi,8
+  ; call read
 
   mov    rax,60
-  mov    rdi,0
+  xor    rdi,rdi
   syscall
